@@ -1,0 +1,16 @@
+name: Test runners
+run-name: ${{ inputs.triggered_by }} ${{ inputs.provider }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      triggered_by:
+        required: true
+        type: string
+      provider:
+        required: true
+        type: string
+      runners:
+        required: true
+        type: string
+        default: '["ubicloud-standard-2-ubuntu-2204","ubicloud-standard-2-ubuntu-2404"]'
