@@ -12,6 +12,7 @@ jobs:
     runs-on: ${{ inputs.runner }}
     env:
       CACHE_VERSION: ${{ inputs.runner }}-${{ github.run_id }}-${{ github.run_attempt }}
+    timeout-minutes: 10
     steps:
       - name: Checkout code
         uses: actions/checkout@v6

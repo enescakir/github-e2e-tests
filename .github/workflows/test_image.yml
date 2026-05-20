@@ -22,6 +22,7 @@ jobs:
       EXPECTED_IMAGE_OS: ${{ inputs.arch == 'x64' && inputs.image_os || format('{0}-arm', inputs.image_os) }}
     name: ${{ inputs.image_os }} ${{ inputs.arch }} core functionality
     runs-on: ${{ inputs.runner }}
+    timeout-minutes: 10
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
